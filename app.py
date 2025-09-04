@@ -897,18 +897,18 @@ class CameraObject:
                     continue
 
                 # Check if we need to restart the stream
-                try:
-                    actual_res = config["main"]["size"]
-                    expected_res = self.video_config["main"]["size"]
+                #try:
+                #    actual_res = config["main"]["size"]
+                #    expected_res = self.video_config["main"]["size"]
 
-                    if actual_res != expected_res:
-                        print(f"⚠️ Resolution mismatch: {actual_res} ≠ {expected_res}")
-                        self.safe_restart_stream()
-                        continue
-                except Exception as e:
-                    print(f"⚠️ Error checking resolution: {e}")
-                    frame = self.placeholder_frame
-                    continue
+                #    if actual_res != expected_res:
+                #        print(f"⚠️ Resolution mismatch: {actual_res} ≠ {expected_res}")
+                #        self.safe_restart_stream()
+                #        continue
+                #except Exception as e:
+                #    print(f"⚠️ Error checking resolution: {e}")
+                #    frame = self.placeholder_frame
+                #    continue
 
                 yield (b'--frame\r\n'
                        b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
