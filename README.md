@@ -1,4 +1,4 @@
-# CamUI for PiCamera2
+# CamUI for PiCamera2 - forked from monkeymademe to suit only the Global Shutter camera.
 
 ![CamUI for PiCamera2](https://github.com/monkeymademe/CamUI/blob/main/static/img/camuilogosideways.png)
 
