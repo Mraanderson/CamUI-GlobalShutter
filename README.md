@@ -62,7 +62,7 @@ sudo apt update && sudo apt upgrade -y
 ```
 2. Clone the repository to your Raspberry Pi:
 ```bash
-git clone https://github.com/monkeymademe/picamera2-WebUI.git
+git clone https://github.com/Mraanderson/CamUI-GlobalShutter.git
 ```
 3. Enter the directory: 
 ```bash
@@ -78,7 +78,7 @@ python app.py
 
 - Run the following command and note down the location for python which python should look like "/usr/bin/python" `which python`
 - Goto the following directory `cd /etc/systemd/system/`
-- Create and edit the following file `sudo nano picamera2-webui.service`
+- Create and edit the following file `sudo nano CamUI-GlobalShutter.service`
 - Paste this into the file, in the line "ExecStart" the 1st part should be the result of your "which python" command we did at the start (if its the same then its all good) the 2nd path is the location of the cloned repo with the app.py
   
 ```bash
@@ -93,9 +93,9 @@ Restart=always
 WantedBy=multi-user.target
 ```
 - Save the file
-- Run `sudo systemctl start picamera2-webui.service` to start the service 
-- Run the following to check the service is running `sudo systemctl status picamera2-webui.service`
-- Run the following to enable the service to its running on reboot `sudo systemctl enable picamera2-webui.service`
+- Run `sudo systemctl start CamUI-GlobalShutter.service` to start the service 
+- Run the following to check the service is running `sudo systemctl status CamUI-GlobalShutter.service`
+- Run the following to enable the service to its running on reboot `sudo systemctl enable CamUI-GlobalShutter.service`
   
 ## Compatibilty
 
@@ -130,4 +130,4 @@ Raspberry Pi Compatibilty:
   
 ## Copyright and license
 
-Code and documentation copyright 2024 the Picamera2 WebUI Authors. Code released under the MIT License. Docs released under Creative Commons.
+Code and documentation copyright 2024 the Picamera2 WebUI Authors. Code released under the MIT License. Docs released under Creative Commons. Changes here will be fed back to the original author for adding to the main repo.
