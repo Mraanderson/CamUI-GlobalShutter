@@ -62,11 +62,12 @@ sudo apt update && sudo apt upgrade -y
 ```
 2. Clone the repository to your Raspberry Pi:
 ```bash
+sudo apt install git
 git clone https://github.com/Mraanderson/CamUI-GlobalShutter.git
 ```
 3. Enter the directory: 
 ```bash
-cd picamera2-WebUI
+cd CamUI-GlobalShutter
 ```
 4. Run the application and access the web interface through your browser.
 ```bash
@@ -87,7 +88,7 @@ Description=CamUI Server
 After=network.target
 [Service]
 Type=simple
-ExecStart=/usr/bin/python /home/pi/CamUI/app.py
+ExecStart=/usr/bin/python /home/pi/CamUI-GlobalShutter/app.py
 Restart=always
 [Install]
 WantedBy=multi-user.target
